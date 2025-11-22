@@ -9,5 +9,8 @@ package de.powerstat.openkarotz;
  */
 public final class Sounds
  {
+  /**
+   * Id.
+   */
   public String id;
  }

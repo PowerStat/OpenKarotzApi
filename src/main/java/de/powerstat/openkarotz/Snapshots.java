@@ -9,5 +9,8 @@ package de.powerstat.openkarotz;
  */
 public class Snapshots
  {
+  /**
+   * Id.
+   */
   public String id;
  }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 Dipl.-Inform. Kai Hofmann. All rights reserved!
+ * Copyright (C) 2021-2025 Dipl.-Inform. Kai Hofmann. All rights reserved!
  */
 package de.powerstat.openkarotz;
 
@@ -119,7 +119,7 @@ public final class OpenKarotzApi
    {
     assert urlPath != null;
     System.out.println("params: " + ValidationUtils.sanitizeUrlPath(urlPath));
-    try (CloseableHttpResponse response = this.httpclient.execute(new HttpGet("http://" + this.hostname.stringValue() + "/cgi-bin" + ValidationUtils.sanitizeUrlPath(urlPath))))//$NON-NLS-1$ //$NON-NLS-2$
+    try (CloseableHttpResponse response = httpclient.execute(new HttpGet("http://" + hostname.stringValue() + "/cgi-bin" + ValidationUtils.sanitizeUrlPath(urlPath))))//$NON-NLS-1$ //$NON-NLS-2$
      {
       final int responseCode = response.getStatusLine().getStatusCode();
       if (responseCode != HttpURLConnection.HTTP_OK)
@@ -130,7 +130,7 @@ public final class OpenKarotzApi
          }
         if (LOGGER.isInfoEnabled())
          {
-          LOGGER.info("HttpStatus: " + response.getStatusLine().getStatusCode() + ":");  //$NON-NLS-1$//$NON-NLS-2$
+          LOGGER.info("HttpStatus: {}:", response.getStatusLine().getStatusCode());  //$NON-NLS-1$
          }
         if (responseCode == HttpURLConnection.HTTP_BAD_REQUEST)
          {
@@ -140,12 +140,12 @@ public final class OpenKarotzApi
       final HttpEntity entity = response.getEntity();
       if (LOGGER.isDebugEnabled())
        {
-        LOGGER.debug("ContentType: " + entity.getContentType()); //$NON-NLS-1$
+        LOGGER.debug("ContentType: {}", entity.getContentType()); //$NON-NLS-1$
        }
       final String result = EntityUtils.toString(entity);
       if (LOGGER.isDebugEnabled())
        {
-        LOGGER.debug("getString: " + result); //$NON-NLS-1$
+        LOGGER.debug("getString: {}" , result); //$NON-NLS-1$
        }
       return result;
      }
@@ -163,7 +163,7 @@ public final class OpenKarotzApi
    {
     final String result = getString("get_free_space"); //$NON-NLS-1$
     final RabbitResults jsonResult = new Gson().fromJson(result, RabbitResults.class);
-    return jsonResult.karotz_percent_used_space;
+    return jsonResult.karotzPercentUsedSpace;
    }
 
 
@@ -178,7 +178,7 @@ public final class OpenKarotzApi
    {
     final String result = getString("get_free_space"); //$NON-NLS-1$
     final RabbitResults jsonResult = new Gson().fromJson(result, RabbitResults.class);
-    return jsonResult.usb_percent_used_space;
+    return jsonResult.usbPercentUsedSpace;
    }
 
 

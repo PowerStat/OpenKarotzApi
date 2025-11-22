@@ -66,7 +66,7 @@ public class OpenKarotzApiTests
    * @throws ParserConfigurationException ParserConfigurationException
    */
   @Test
-  public void newInstance1() throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, ParserConfigurationException
+  /* default */ void testNewInstance1() throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, ParserConfigurationException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     assertNotNull(api, "newInstance failed!"); //$NON-NLS-1$
@@ -82,7 +82,7 @@ public class OpenKarotzApiTests
    * @throws ParserConfigurationException ParserConfigurationException
    */
   @Test
-  public void newInstance2() throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, ParserConfigurationException
+  /* default */ void testNewInstance2() throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, ParserConfigurationException
    {
     final CloseableHttpClient mockHttpclient = mock(CloseableHttpClient.class);
     final OpenKarotzApi api = OpenKarotzApi.newInstance(mockHttpclient, Hostname.of(KAROTZ));
@@ -101,7 +101,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void getFreeKarotzSpace() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testGetFreeKarotzSpace() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final int freespace = api.getFreeKarotzSpace();
@@ -122,7 +122,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void getFreeUsbSpace() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testGetFreeUsbSpace() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final int freespace = api.getFreeUsbSpace();
@@ -143,7 +143,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void getSounds() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testGetSounds() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final List<String> sounds = api.getSoundList();
@@ -179,7 +179,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void wakeup() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testWakeup() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean silent1 = api.wakeup(true);
@@ -202,7 +202,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void sleep() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testSleep() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean sleep1 = api.sleep();
@@ -226,7 +226,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void earsReset() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testEarsReset() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean success = api.earsReset();
@@ -247,7 +247,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void earsRandom() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testEarsRandom() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean success = api.earsRandom();
@@ -268,7 +268,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void earsMode() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testEarsMode() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean success1 = api.earsMode(true);
@@ -291,7 +291,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void earsPosition() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testEarsPosition() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean success1 = api.earsPosition(0, 0, false);
@@ -312,7 +312,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void ledColor() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testLedColor() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean success = api.ledColor("000000", false, 1000, "000000"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -333,7 +333,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void displayCache() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testDisplayCache() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final int count = api.displayCache();
@@ -354,7 +354,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void clearCache() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testClearCache() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.clearCache();
@@ -375,7 +375,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void tts() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testTts() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.tts(false, "de", "Hallo Welt"); //$NON-NLS-2$
@@ -396,7 +396,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void playSoundById() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testPlaySoundById() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.playSoundById("twang_04"); // bip1, bling, flush, install_ok, jet1, laser_15, merde, ready, rfid_error, rfid_ok, saut1, start, twang_01, twang_04
@@ -417,7 +417,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void playSoundByUrl() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testPlaySoundByUrl() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.playSoundByUrl("http://streaming.radionomy.com/Bob-Marley"); //$NON-NLS-1$
@@ -447,7 +447,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void quitSound() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testQuitSound() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.playSoundByUrl("http://streaming.radionomy.com/Bob-Marley"); //$NON-NLS-1$
@@ -477,7 +477,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void pauseSound() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testPauseSound() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.playSoundByUrl("http://streaming.radionomy.com/Bob-Marley"); //$NON-NLS-1$
@@ -507,7 +507,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void startStopSqueezebox() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testStartStopSqueezebox() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.startSqueezebox();
@@ -538,7 +538,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void snapshotList() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testSnapshotList() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final List<String> result = api.snapshotList();
@@ -563,7 +563,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void clearSnapshots() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testClearSnapshots() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.clearSnapshots();
@@ -584,7 +584,7 @@ public class OpenKarotzApiTests
    * @throws InvalidKeyException Invalid key exception
    */
   @Test
-  public void takeSnapshot() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
+  /* default */ void testTakeSnapshot() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
     final boolean result = api.takeSnapshot(false);

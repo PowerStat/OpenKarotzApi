@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 Dipl.-Inform. Kai Hofmann. All rights reserved!
+ * Copyright (C) 2021-2025 Dipl.-Inform. Kai Hofmann. All rights reserved!
  */
 package de.powerstat.openkarotz;
 
@@ -14,60 +14,206 @@ import com.google.gson.annotations.SerializedName;
  */
 public final class RabbitResults2
  {
+  /**
+   * Return.
+   */
   @SerializedName("return")
   public boolean return_;
+
+  /**
+   * Silent.
+   */
   public int silent;
 
-  public int karotz_percent_used_space;
-  public int usb_percent_used_space;
+  /**
+   * Karotz percent used space.
+   */
+  public int karotzPercentUsedSpace;
 
+  /**
+   * USB stick percent used space.
+   */
+  public int usbPercentUsedSpace;
+
+  /**
+   * Color.
+   */
   public String color;
-  public String secondary_color;
+
+  /**
+   * Secondary color.
+   */
+  public String secondaryColor;
+
+  /**
+   * Pulse.
+   */
   public int pulse;
-  public int no_memory;
+
+  /**
+   * No memory.
+   */
+  public int noMemory;
+
+  /**
+   * Speed.
+   */
   public String speed;
 
+  /**
+   * Disabled.
+   */
   public int disabled;
+
+  /**
+   * Left ear.
+   */
   public int left;
+
+  /**
+   * Right ear.
+   */
   public int right;
+
+  /**
+   * Message.
+   */
   public String msg;
 
+  /**
+   * List of tags.
+   */
   public List<?> tags;
 
+  /**
+   * Count.
+   */
   public int count;
 
+  /**
+   * Played.
+   */
   public boolean played;
+
+  /**
+   * Cache.
+   */
   public boolean cache;
+
+  /**
+   * Voice language.
+   */
   public String voicelanguage;
+
+  /**
+   * Voice gender.
+   */
   public String voicegender;
+
+  /**
+   * id.
+   */
   public String id;
 
+  /**
+   * List of snapshots.
+   */
   public List<Snapshots> snapshots;
 
+  /**
+   * URL.
+   */
   public String url;
 
+  /**
+   * Moods.
+   */
   public int moods;
 
+  /**
+   * Hour.
+   */
   public int hour;
 
+  /**
+   * List of sounds.
+   */
   public List<Sounds> sounds;
 
+  /**
+   * Version.
+   */
   public int version;
 
-  public int ears_disabled;
+  /**
+   * Ears disabled.
+   */
+  public int earsDisabled;
+
+  /**
+   * Sleep.
+   */
   public int sleep;
-  public int sleep_time;
-  public String led_color;
-  public int led_pulse;
-  public long tts_cache_size;
-  public String usb_free_space;
-  public String karotz_free_sp;
-  public String wlan_mac;
-  public int nb_tags;
-  public int nb_moods;
-  public int nb_sounds;
-  public int nb_stories;
-  public String data_dir;
+
+  /**
+   * Sleep time.
+   */
+  public int sleepTime;
+
+  /**
+   * LED color.
+   */
+  public String ledColor;
+
+  /**
+   * LED pulse.
+   */
+  public int ledPulse;
+
+  /**
+   * TTS cache size.
+   */
+  public long ttsCacheSize;
+
+  /**
+   * USB free space.
+   */
+  public String usbFreeSpace;
+
+  /**
+   * Karotz free space.
+   */
+  public String karotzFreeSp;
+
+  /**
+   * WLAN mac address.
+   */
+  public String wlanMac;
+
+  /**
+   * NB tags.
+   */
+  public int nbTags;
+
+  /**
+   * NB moods.
+   */
+  public int nbMoods;
+
+  /**
+   * NB sounds.
+   */
+  public int nbSounds;
+
+  /**
+   * NB stories.
+   */
+  public int nbStories;
+
+  /**
+   * NB data dir.
+   */
+  public String dataDir;
 
 
   /**
@@ -84,46 +230,46 @@ public final class RabbitResults2
   public String toString()
    {
     final StringBuilder result = new StringBuilder();
-    result.append("RabbitResults[return = ").append(this.return_);
-    result.append("; silent = ").append(this.silent);
-    result.append("; karotz_percent_used_space = ").append(this.karotz_percent_used_space);
-    result.append("; usb_percent_used_space = ").append(this.usb_percent_used_space);
-    result.append("; color = ").append(this.color);
-    result.append("; secondary_color = ").append(this.secondary_color);
-    result.append("; pulse = ").append(this.pulse);
-    result.append("; no_memory = ").append(this.no_memory);
-    result.append("; speed = ").append(this.speed);
-    result.append("; disabled = ").append(this.disabled);
-    result.append("; left = ").append(this.left);
-    result.append("; right = ").append(this.right);
-    result.append("; msg = ").append(this.msg);
+    result.append("RabbitResults[return = ").append(return_);
+    result.append("; silent = ").append(silent);
+    result.append("; karotzPercentUsedSpace = ").append(karotzPercentUsedSpace);
+    result.append("; usbPercentUsedSpace = ").append(usbPercentUsedSpace);
+    result.append("; color = ").append(color);
+    result.append("; secondaryColor = ").append(secondaryColor);
+    result.append("; pulse = ").append(pulse);
+    result.append("; no_Memory = ").append(noMemory);
+    result.append("; speed = ").append(speed);
+    result.append("; disabled = ").append(disabled);
+    result.append("; left = ").append(left);
+    result.append("; right = ").append(right);
+    result.append("; msg = ").append(msg);
     // tags
-    result.append("; count = ").append(this.count);
-    result.append("; played = ").append(this.played);
-    result.append("; cache = ").append(this.cache);
-    result.append("; voicelanguage = ").append(this.voicelanguage);
-    result.append("; voicegender = ").append(this.voicegender);
-    result.append("; id = ").append(this.id);
+    result.append("; count = ").append(count);
+    result.append("; played = ").append(played);
+    result.append("; cache = ").append(cache);
+    result.append("; voicelanguage = ").append(voicelanguage);
+    result.append("; voicegender = ").append(voicegender);
+    result.append("; id = ").append(id);
     // snapshots
-    result.append("; url = ").append(this.url);
-    result.append("; moods = ").append(this.moods);
-    result.append("; hour = ").append(this.hour);
+    result.append("; url = ").append(url);
+    result.append("; moods = ").append(moods);
+    result.append("; hour = ").append(hour);
     // sounds
-    result.append("; version = ").append(this.version);
-    result.append("; ears_disabled = ").append(this.ears_disabled);
-    result.append("; sleep = ").append(this.sleep);
-    result.append("; sleep_time = ").append(this.sleep_time);
-    result.append("; led_color = ").append(this.led_color);
-    result.append("; led_pulse = ").append(this.led_pulse);
-    result.append("; tts_cache_size = ").append(this.tts_cache_size);
-    result.append("; usb_free_space = ").append(this.usb_free_space);
-    result.append("; karotz_free_sp = ").append(this.karotz_free_sp);
-    result.append("; wlan_mac = ").append(this.wlan_mac);
-    result.append("; nb_tags = ").append(this.nb_tags);
-    result.append("; nb_moods = ").append(this.nb_moods);
-    result.append("; nb_sounds = ").append(this.nb_sounds);
-    result.append("; nb_stories = ").append(this.nb_stories);
-    result.append("; data_dir = ").append(this.data_dir);
+    result.append("; version = ").append(version);
+    result.append("; earsDisabled = ").append(earsDisabled);
+    result.append("; sleep = ").append(sleep);
+    result.append("; sleepTime = ").append(sleepTime);
+    result.append("; ledColor = ").append(ledColor);
+    result.append("; ledPulse = ").append(ledPulse);
+    result.append("; ttsCacheSize = ").append(ttsCacheSize);
+    result.append("; usbFreeSpace = ").append(usbFreeSpace);
+    result.append("; karotzFreeSp = ").append(karotzFreeSp);
+    result.append("; wlanMac = ").append(wlanMac);
+    result.append("; nbTags = ").append(nbTags);
+    result.append("; nbMoods = ").append(nbMoods);
+    result.append("; nbSounds = ").append(nbSounds);
+    result.append("; nbStories = ").append(nbStories);
+    result.append("; dataDir = ").append(dataDir);
     result.append(']');
     return result.toString();
    }
