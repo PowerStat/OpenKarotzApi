@@ -433,7 +433,7 @@ public class OpenKarotzApiTests
      {
       // ignore
      }
-    final boolean result2 = api.quitSound();
+    /* final boolean result2 = */ api.quitSound();
    }
 
 
@@ -451,7 +451,7 @@ public class OpenKarotzApiTests
   /* default */ void testQuitSound() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
-    final boolean result = api.playSoundByUrl("http://streaming.radionomy.com/Bob-Marley"); //$NON-NLS-1$
+    /* final boolean result = */ api.playSoundByUrl("http://streaming.radionomy.com/Bob-Marley"); //$NON-NLS-1$
     try
      {
       java.util.concurrent.TimeUnit.SECONDS.sleep(10);
@@ -481,7 +481,7 @@ public class OpenKarotzApiTests
   /* default */ void testPauseSound() throws IOException, NoSuchAlgorithmException, KeyManagementException, KeyStoreException, ParserConfigurationException, InvalidKeyException
    {
     final OpenKarotzApi api = OpenKarotzApi.newInstance(KAROTZ);
-    final boolean result = api.playSoundByUrl("http://streaming.radionomy.com/Bob-Marley"); //$NON-NLS-1$
+    /* final boolean result = */ api.playSoundByUrl("http://streaming.radionomy.com/Bob-Marley"); //$NON-NLS-1$
     try
      {
       java.util.concurrent.TimeUnit.SECONDS.sleep(10);
