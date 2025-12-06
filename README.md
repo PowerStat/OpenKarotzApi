@@ -66,6 +66,10 @@ To make a new release:
     mvn --batch-mode release:clean release:prepare release:perform
     git push -–tags
     git push origin main
+    
+To run jacoco:
+
+    mvn -Pjacoco clean test site
 
 To run checkstyle:
 
