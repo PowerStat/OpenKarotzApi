@@ -28,7 +28,7 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
 import de.powerstat.openkarotz.OpenKarotzApi;
-import de.powerstat.validation.values.Hostname;
+import de.powerstat.ddd.values.comm.Hostname;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 

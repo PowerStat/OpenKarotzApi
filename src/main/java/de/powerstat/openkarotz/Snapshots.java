@@ -14,4 +14,14 @@ public class Snapshots
    * Id.
    */
   public String id;
+
+  
+  /**
+   * Default constructor.
+   */
+  public Snapshots()
+   {
+	super();
+   }
+
  }

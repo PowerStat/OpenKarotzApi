@@ -34,8 +34,8 @@ import org.apache.logging.log4j.Logger;
 
 import com.google.gson.Gson;
 
-import de.powerstat.validation.ValidationUtils;
-import de.powerstat.validation.values.Hostname;
+import de.powerstat.ddd.ValidationUtils;
+import de.powerstat.ddd.values.comm.Hostname;
 
 
 /**

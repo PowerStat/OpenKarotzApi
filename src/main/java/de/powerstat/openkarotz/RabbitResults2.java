@@ -216,6 +216,15 @@ public final class RabbitResults2
    */
   public String dataDir;
 
+  
+  /**
+   * Default constructor.
+   */
+  public RabbitResults2()
+   {
+	super();
+   }
+
 
   /**
    * Returns the string representation of this RabbitResults.

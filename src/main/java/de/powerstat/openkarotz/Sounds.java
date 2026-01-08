@@ -14,4 +14,14 @@ public final class Sounds
    * Id.
    */
   public String id;
+
+  
+  /**
+   * Default constructor.
+   */
+  public Sounds()
+   {
+	super();
+   }
+
  }
